@@ -37,6 +37,7 @@
               var id_pariwisata = markerElem.getAttribute('id_pariwisata');
               var nama_pariwisata = markerElem.getAttribute('nama_pariwisata');
               var alamat = markerElem.getAttribute('alamat');
+              var bendera = markerElem.getAttribute('bendera');
               var point = new google.maps.LatLng(
                   parseFloat(markerElem.getAttribute('lat')),
                   parseFloat(markerElem.getAttribute('long')));
@@ -54,7 +55,8 @@
               infowincontent.appendChild(a);
               var marker = new google.maps.Marker({
                 map: map,
-                position: point
+                position: point,
+                icon: "http://localhost/maps/" + bendera
               });
               
               marker.addListener('click', function() {
