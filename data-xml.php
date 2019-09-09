@@ -10,6 +10,6 @@ echo "<markers>";
 $sql="select * from pariwisata";
 $query=mysqli_query($koneksi,$sql) or die(mysqli_error());
 while ($data=mysqli_fetch_array($query)) {
-	echo "<marker id_pariwisata='".$data['id_pariwisata']."' nama_pariwisata='".$data['nama_pariwisata']."'  alamat='".$data['alamat']."' lat='".$data['lat']."' long='".$data['long']."'/>";
+	echo "<marker id_pariwisata='".$data['id_pariwisata']."' nama_pariwisata='".$data['nama_pariwisata']."'  alamat='".$data['alamat']."' lat='".$data['lat']."' long='".$data['long']."' bendera='".$data['bendera']."'/>";
 }
 echo "</markers>";
